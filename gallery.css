@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+body::before,
+body::after {
+  content: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+
+
+/* Extra space for bottom divider */
+.divider-bottom {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+
+  
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Masonry gallery */
+.gallery {
+  column-count: 3;
+  column-gap: 25px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Image wrapper */
+.img-wrap {
+  position: relative;
+  margin-bottom: 25px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Watermark */
+.watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
+#music-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 28px;
+  font-size: 16px;
+  background: #ff00aa;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#music-btn:hover {
+  opacity: 0.85;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 30px auto;
+}
